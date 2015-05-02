@@ -38,10 +38,10 @@
 
     $p1 = new Params();
 
-    echo "<p>" . $p1->minMultiplicand;
-    echo "<p>" . $p1->maxMultiplicand;
-    echo "<p>" . $p1->minMultiplier;
-    echo "<p>" . $p1->maxMultiplier;
+//    echo "<p>" . $p1->minMultiplicand;
+//    echo "<p>" . $p1->maxMultiplicand;
+//    echo "<p>" . $p1->minMultiplier;
+//    echo "<p>" . $p1->maxMultiplier;
 
     foreach($p1 as $key => $value) {
         if (!is_numeric($value)) {
@@ -56,6 +56,26 @@
         die('<p>Minimum multiplier larger than maximum.');
     }
 
+    echo '<table border="1">';
+    $height = $p1->maxMultiplicand - $p1->minMultiplicand + 2;
+    $width = $p1->maxMultiplier - $p1->minMultiplier + 2;
+    for ($i = 0; $i < $height; $i++) {
+        echo '<tr>';
+        for ($j = 0; $j < $width; $j++) {
+            if ($i == 0 && $j == 0) {
+                echo '<td>';
+            }
+            else if ($j == 0) {
+                echo '<td><b>' . ($p1->minMultiplicand + $i - 1) . '</b>';
+            }
+            else if ($i == 0){
+                echo '<td><b>' . ($p1->minMultiplier + $j - 1) . '</b>';
+            }
+            else {
+                echo '<td>' . (($p1->minMultiplier + $j - 1) * ($p1->minMultiplicand + $i - 1));
+            }
+        }
+    }
     ?>
 </body>
 </html>
