@@ -1,9 +1,11 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-//the following block of session handling code is borrowed from the "PHP Sessions" lecture
+
 session_start();
-if (isset($_GET['action']) && $_GET['action'] == 'end') {
+//much of the following block of session handling code is borrowed from the "PHP Sessions" lecture
+if ((isset($_GET['action']) && $_GET['action'] == 'end') ||
+    (!(isset($_POST['username'])) && !(isset($_SESSION['username'])))) {
     $_SESSION = array();
     session_destroy();
     $filePath = explode('/', $_SERVER['PHP_SELF'], -1);
@@ -21,6 +23,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'end') {
 </head>
 <body>
     <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
     if (isset($_POST['username']) && $_POST['username'] == '') {
         echo '<p>A username must be entered. Click <a href="/login.php/">here</a> to return to the login screen.';
@@ -40,6 +44,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'end') {
         echo "<p>Hello $_SESSION[username], you have visited this page $_SESSION[visits] times before.";
     }
     echo '<p>Click <a href="content1.php?action=end">here</a> to logout.';
+
+    echo '<div><p>Check out some more <a href="/~neliganj/assignment4-part1/content2.php">content!</a></p></div>';
 
     ?>
 

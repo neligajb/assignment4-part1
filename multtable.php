@@ -9,17 +9,26 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
+    $kill = false;
     if (!array_key_exists('min-multiplicand', $_GET)) {
-        echo die('<p>Missing parameter: min-multiplicand');
+        echo '<p>Missing parameter: min-multiplicand';
+        $kill = true;
     }
     if (!array_key_exists('max-multiplicand', $_GET)) {
-        echo die('<p>Missing parameter: max-multiplicand');
+        echo '<p>Missing parameter: max-multiplicand';
+        $kill = true;
     }
     if (!array_key_exists('min-multiplier', $_GET)) {
-        echo die('<p>Missing parameter: min-multiplier');
+        echo '<p>Missing parameter: min-multiplier';
+        $kill = true;
     }
     if (!array_key_exists('max-multiplier', $_GET)) {
-        echo die('<p>Missing parameter: max-multiplier');
+        echo '<p>Missing parameter: max-multiplier';
+        $kill = true;
+    }
+
+    if ($kill) {
+        die();
     }
 
     class Params {
