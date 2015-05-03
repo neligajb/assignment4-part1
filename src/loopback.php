@@ -17,7 +17,7 @@ else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 else {
-    die('<p>Invalid request.');
+    die('Invalid request.');
 }
 
 echo json_encode($reqArray, JSON_FORCE_OBJECT);
