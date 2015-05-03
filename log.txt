@@ -1,11 +1,22 @@
-Start: ~
-End: Sat, 2 May 2015 19:08:50 -0400
-Tasks: completed multtable
+Start: Sun, 3 May 2015 11:15:00 -0400
+End: Sun, 3 May 2015 12:06:59 -0400 
+Tasks: set Content-Type header on loopback.php to application/json for cleaner/leaner output
+Tasks: fixed page count so that n displays as 0 on first visit
+Tasks: removed <p> tag from loopback.php
 
-Start: ~
-End: Sat, 2 May 2015 18:35:38 -0400
-Tasks: finshed error checking on multtable
+Start: Sun, 3 May 2015 02:40:00 -0400
+End: Sun, 3 May 2015 03:17:32 -0400  
+Tasks: attempting .gitignore for .idea files
+Tasks: updating ignore file
+Tasks: updated directory
 
 Start: Sat, 2 May 2015 15:45:00 -0400
-End: Sat, 2 May 2015 17:34:19 -0400
+End: Sat, 2 May 2015 23:11:41 -0400
 Tasks: Set up JetBrains IDE and local PHP interpretation. initial commit
+Tasks: finshed error checking on multtable
+Tasks: completed multtable
+Tasks: completed login, logout, and visit count functions in login.php and content1.php
+Tasks: finished content2.php implementation, and security checks for valid login on content1.php and contet2.php
+Tasks: cursory update of all files
+Tasks: minor style touch ups on multtable.php
+Tasks: redirected login.php when user is already logged in and has an active session
