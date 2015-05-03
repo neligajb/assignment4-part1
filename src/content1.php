@@ -40,8 +40,8 @@ if ((isset($_GET['action']) && $_GET['action'] == 'end') ||
             $_SESSION['visits'] = 0;
         }
 
-        $_SESSION['visits']++;
         echo "<p>Hello $_SESSION[username], you have visited this page $_SESSION[visits] times before.";
+        $_SESSION['visits']++;
     }
     echo '<p>Click <a href="content1.php?action=end">here</a> to logout.';
 
