@@ -19,6 +19,9 @@
             $reqArray['parameters'] = null;
         }
     }
+    else {
+        die('<p>Invalid request.');
+    }
 
     echo json_encode($reqArray, JSON_FORCE_OBJECT);
 

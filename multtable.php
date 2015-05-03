@@ -56,6 +56,9 @@
         if (!is_numeric($value)) {
             die('<p>' . $key . ' must be an integer.');
         }
+        else if($value < 0) {
+            die('<p>Negatives integers not allowed. (' . $key . ' is negative)');
+        }
     }
 
     if ($p1->minMultiplicand > $p1->maxMultiplicand) {
@@ -65,23 +68,23 @@
         die('<p>Minimum multiplier larger than maximum.');
     }
 
-    echo '<table border="1">';
+    echo '<table style="border: 1px solid black, border-collapse: collapse">';
     $height = $p1->maxMultiplicand - $p1->minMultiplicand + 2;
     $width = $p1->maxMultiplier - $p1->minMultiplier + 2;
     for ($i = 0; $i < $height; $i++) {
         echo '<tr>';
         for ($j = 0; $j < $width; $j++) {
             if ($i == 0 && $j == 0) {
-                echo '<td>';
+                echo '<td  style="border: 1px solid gray">';
             }
             else if ($j == 0) {
-                echo '<td><b>' . ($p1->minMultiplicand + $i - 1) . '</b>';
+                echo '<td  style="border: 1px solid gray"><b>' . ($p1->minMultiplicand + $i - 1) . '</b>';
             }
             else if ($i == 0){
-                echo '<td><b>' . ($p1->minMultiplier + $j - 1) . '</b>';
+                echo '<td  style="border: 1px solid gray"><b>' . ($p1->minMultiplier + $j - 1) . '</b>';
             }
             else {
-                echo '<td>' . (($p1->minMultiplier + $j - 1) * ($p1->minMultiplicand + $i - 1));
+                echo '<td  style="border: 1px solid gray">' . (($p1->minMultiplier + $j - 1) * ($p1->minMultiplicand + $i - 1));
             }
         }
     }

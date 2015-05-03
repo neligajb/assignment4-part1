@@ -27,7 +27,7 @@ if ((isset($_GET['action']) && $_GET['action'] == 'end') ||
     ini_set('display_errors', 1);
 
     if (isset($_POST['username']) && $_POST['username'] == '') {
-        echo '<p>A username must be entered. Click <a href="/login.php/">here</a> to return to the login screen.';
+        echo '<p>A username must be entered. Click <a href="/login.php">here</a> to return to the login screen.';
         die();
     }
 
@@ -45,7 +45,7 @@ if ((isset($_GET['action']) && $_GET['action'] == 'end') ||
     }
     echo '<p>Click <a href="content1.php?action=end">here</a> to logout.';
 
-    echo '<div><p>Check out some more <a href="/~neliganj/assignment4-part1/content2.php">content!</a></p></div>';
+    echo '<div><p>Check out some more <a href="/~neliganj/assignment4-part1/src/content2.php">content!</a></p></div>';
 
     ?>
 
