@@ -25,8 +25,5 @@ if ((isset($_SESSION['username']))) {
             <p><input type="submit" /></p>
         </form>
     </div>
-    <?php
-
-    ?>
 </body>
 </html>

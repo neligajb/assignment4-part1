@@ -21,6 +21,6 @@ if (!(isset($_SESSION['username']))) {
     <title>content2.php</title>
 </head>
 <body>
-    <p>Some more really great content!  Here is a <a href="/~neliganj/assignment4-part1/src/content1.php">link</a> back to the first content page.</p>
+    <p>Some more really great content!  Here is a <a href="/sessions/content1.php">link</a> back to the first content page.</p>
 </body>
 </html>
