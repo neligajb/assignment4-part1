@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 session_start();
-//much of the following block of session handling code is borrowed from the "PHP Sessions" lecture
+
 if ((isset($_GET['action']) && $_GET['action'] == 'end') ||
     (!(isset($_POST['username'])) && !(isset($_SESSION['username'])))) {
     $_SESSION = array();
